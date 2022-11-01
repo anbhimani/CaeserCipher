@@ -1,0 +1,34 @@
+//importing the scanner so that user input can be accepted
+import java.util.Scanner;
+
+public class CaeserCipher {
+
+    private static Scanner sc = new Scanner(System.in);
+
+        public static void run(){
+            //creates menu
+            System.out.println(
+                    """
+                    1. Text to binary
+                    2. Binary to text
+                    3. Quit
+                    Enter choice:\s
+                    """
+            );
+            int choice = sc.nextInt();
+            sc.nextLine(); //Buffer
+
+            //based on choice, different function will be called
+            if(choice==1){
+                textToBinary();
+
+            }
+            else if (choice == 2){
+                binaryToText();
+            }
+
+
+
+        }
+
+        private static void binaryToText() {
